@@ -81,8 +81,7 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
 		return next(new ErrorResponse(`User ${req.params.id} is not authorized to delete this bootcamp`, 401));
 	}
 
-	await Course.deleteMany({ bootcamp: req.params.id });
-	await Bootcamp.findByIdAndDelete(req.params.id);
+	await bootcamp.deleteOne();
 	res.status(200).json({ success: true, data: {} });
 });
 
