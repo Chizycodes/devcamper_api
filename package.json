@@ -8,7 +8,7 @@
     "dev": "nodemon server"
   },
   "engines": {
-    "node": ">=16"
+    "node": "16.0.0"
   },
   "author": "Joy Okwudire",
   "license": "MIT",
